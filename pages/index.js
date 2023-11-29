@@ -8,6 +8,8 @@ import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
 const Index = ({ navigation, settings, page, items }) => {
+
+
   console.log(items)
   return (
     <Layout
@@ -31,10 +33,25 @@ const Index = ({ navigation, settings, page, items }) => {
         </div>
         <div className="lab-items">
           {items.map((item, i) => {
+            function toggle(){
+              document.getElementById(item.uid).classList.toggle("active");
+            }
             return(
-              <div className="lab-item" key={`labitem${i}`}>
-                <h2>{item.data?.title}</h2>
-                <h3>{item.data.person.data?.title}</h3>
+              <div className="lab-item" key={`labitem${i}`} onClick={toggle} id={item.uid}>
+                <div className="lab-item-cover">
+                  <h2>{item.data?.title}</h2>
+                  <h4>{item.data.person.data?.title}</h4>
+                </div>
+                <div className="content">
+                  {item.data.slices.map((slice, j) => {
+                    return(
+                      <div className="content-block" key={`slice${j}`}>
+                        <h3>{slice.primary.title}</h3>
+                        <PrismicRichText field={slice.primary.text}/>
+                      </div>
+                    )
+                  })}
+                </div>
               </div>
             )
           })}
