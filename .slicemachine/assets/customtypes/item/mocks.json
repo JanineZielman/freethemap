@@ -1,0 +1,114 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "castle"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "breathe",
+    "type": "Text"
+  },
+  "person": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "DocumentLink",
+      "id": "mock_document_id"
+    }
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "image$2840e2a8-e480-4d3a-9ebf-1fa2dae5832e",
+        "name": "image",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+                "width": 3277,
+                "height": 4092
+              },
+              "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055?rect=0%2C0%2C3276%2C4092&w=1080&h=1349",
+              "width": 1080,
+              "height": 1349,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "caption": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Ipsum qui occaecat amet ullamco eiusmod sint eiusmod ut. Tempor excepteur quis consectetur."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      },
+      {
+        "key": "text$4a689213-943e-49aa-b2ce-56709dd86265",
+        "name": "text",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "FieldContent",
+              "value": "symbol",
+              "type": "Text"
+            },
+            "text": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Nulla aliqua quis incididunt cupidatat nisi dolor esse mollit aute ipsum non aliqua ullamco cupidatat. Aliqua in cupidatat excepteur ea mollit excepteur mollit minim cupidatat laborum mollit ullamco ut. Ipsum Lorem consequat duis cillum reprehenderit eu cillum nisi laboris."
+                  }
+                }
+              ]
+            },
+            "caption": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Minim exercitation qui minim consectetur. Occaecat labore minim amet Lorem irure. Minim fugiat ea ea consequat ipsum in exercitation dolor labore voluptate laborum aute in."
+                  }
+                }
+              ]
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

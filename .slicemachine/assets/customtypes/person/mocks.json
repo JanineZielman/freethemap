@@ -1,0 +1,22 @@
+{
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "sets"
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "equally",
+    "type": "Text"
+  },
+  "bio": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "paragraph",
+        "content": {
+          "text": "Aute ut cillum occaecat. Nostrud laboris reprehenderit est labore laborum aute eiusmod esse sunt nisi."
+        }
+      }
+    ]
+  }
+}

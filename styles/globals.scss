@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Calibre";
+  src: url("Calibre-Regular.woff2") format("woff2");
+}
+
+$h1: 54px;
+$h2: 36px;
+$h3: 30px;
+$body: 18px;
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Calibre";
+  font-size: $body;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+h1,h2{
+  font-family: "leo", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h2{
+  font-size: $h1;
+  margin: 0;
+}
+
+h3{
+  font-size: $h3;
+  margin: 0;
+}
+
+.intro{
+  display: flex;
+  img{
+    width: 25%;
+    height: auto;
+    object-fit: contain;
+  }
+  .intro-text{
+    width: 75%;
+    padding: 0 24px;
+    vertical-align: top;
+    display: flex;
+    p{
+      width: 50%;
+      font-size: $h3;
+      padding: 0 24px;
+    }
+  }
+}
+
+.lab-items{
+  display: flex;
+  flex-wrap: wrap;
+  .lab-item{
+    width: 25%;
+    background-color: black;
+    aspect-ratio: 3/4;
+    border: 1px solid white;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

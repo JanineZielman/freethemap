@@ -1,5 +1,21 @@
 {
   "_cts": {
-    "page": {}
+    "page": {},
+    "settings": {},
+    "navigation": {},
+    "item": {},
+    "person": {}
+  },
+  "slices": {
+    "Text": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Image": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

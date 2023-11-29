@@ -1,0 +1,33 @@
+{
+  "site_title": {
+    "__TYPE__": "FieldContent",
+    "value": "nervous",
+    "type": "Text"
+  },
+  "site_description": {
+    "__TYPE__": "FieldContent",
+    "value": "market",
+    "type": "Text"
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e",
+      "width": 6000,
+      "height": 4000
+    },
+    "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e?rect=1%2C0%2C5998%2C4000&w=1918&h=1279",
+    "width": 1918,
+    "height": 1279,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 1,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  }
+}
