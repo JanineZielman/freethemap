@@ -1,30 +1,23 @@
 {
-  "id": "text",
+  "id": "quote",
   "type": "SharedSlice",
-  "name": "Text",
-  "description": "Text",
+  "name": "Quote",
+  "description": "Quote",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "Text",
+      "description": "Quote",
       "primary": {
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        },
-        "text": {
+        "quote": {
           "type": "StructuredText",
           "config": {
-            "label": "Text",
+            "label": "Quote",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
+            "multi": "heading3,strong,em,hyperlink"
           }
         }
       },

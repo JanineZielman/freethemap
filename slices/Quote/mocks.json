@@ -3,18 +3,13 @@
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
     "primary": {
-      "title": {
-        "__TYPE__": "FieldContent",
-        "value": "summer",
-        "type": "Text"
-      },
-      "text": {
+      "quote": {
         "__TYPE__": "StructuredTextContent",
         "value": [
           {
-            "type": "paragraph",
+            "type": "heading3",
             "content": {
-              "text": "Velit nisi labore non dolor non. Reprehenderit veniam Lorem ipsum aute laboris in amet tempor."
+              "text": "Principle"
             }
           }
         ]

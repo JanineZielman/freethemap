@@ -46,7 +46,7 @@ interface ItemDocumentData {
  * Slice for *Item → Slice Zone*
  *
  */
-type ItemDocumentDataSlicesSlice = ImageSlice | TextSlice;
+type ItemDocumentDataSlicesSlice = ImageSlice | TextSlice | QuoteSlice;
 /**
  * Item document from Prismic
  *
@@ -290,6 +290,45 @@ type ImageSliceVariation = ImageSliceDefault;
  */
 export type ImageSlice = prismicT.SharedSlice<"image", ImageSliceVariation>;
 /**
+ * Primary content in Quote → Primary
+ *
+ */
+interface QuoteSliceDefaultPrimary {
+    /**
+     * Quote field in *Quote → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: quote.primary.quote
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    quote: prismicT.RichTextField;
+}
+/**
+ * Default variation for Quote Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Quote`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type QuoteSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<QuoteSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Quote*
+ *
+ */
+type QuoteSliceVariation = QuoteSliceDefault;
+/**
+ * Quote Shared Slice
+ *
+ * - **API ID**: `quote`
+ * - **Description**: `Quote`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type QuoteSlice = prismicT.SharedSlice<"quote", QuoteSliceVariation>;
+/**
  * Primary content in Text → Primary
  *
  */
@@ -314,16 +353,6 @@ interface TextSliceDefaultPrimary {
      *
      */
     text: prismicT.RichTextField;
-    /**
-     * Caption field in *Text → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text.primary.caption
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    caption: prismicT.RichTextField;
 }
 /**
  * Default variation for Text Slice
@@ -353,6 +382,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ItemDocumentData, ItemDocumentDataSlicesSlice, ItemDocument, NavigationDocumentData, NavigationDocumentDataMenuItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PersonDocumentData, PersonDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { ItemDocumentData, ItemDocumentDataSlicesSlice, ItemDocument, NavigationDocumentData, NavigationDocumentDataMenuItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PersonDocumentData, PersonDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }
