@@ -1,4 +1,58 @@
-@media only screen and (max-width: 600px) {
- 
+@media only screen and (max-width: 1600px) {
+  .intro{
+    .intro-text{
+      p{
+        font-size: 20px;
+      }
+    }
+  }
   
+}
+
+@media only screen and (max-width: 1300px) {
+  .intro{
+    img{
+      width: 33%;
+    }
+    .intro-text{
+      width: 66%;
+      padding: 0 14px;
+      flex-direction: column;
+      p{
+        width: 100%;
+      }
+    }
+  }
+  .lab-items{
+    .lab-item{
+      width: 33%;
+    }
+  }
+  
+}
+
+@media only screen and (max-width: 900px) {
+  .lab-items{
+    .lab-item{
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .intro{
+    flex-direction: column;
+    img{
+      width: 100%;
+    }
+    .intro-text{
+      width: 100%;
+      padding: 0 0px;
+    }
+  }
+  .lab-items{
+    .lab-item{
+      width: 100%;
+    }
+  }
 }
