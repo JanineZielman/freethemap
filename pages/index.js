@@ -8,9 +8,6 @@ import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
 const Index = ({ navigation, settings, page, items }) => {
-
-
-  console.log(items)
   return (
     <Layout
       navigation={navigation}
@@ -35,6 +32,10 @@ const Index = ({ navigation, settings, page, items }) => {
           {items.map((item, i) => {
             function toggle(){
               document.getElementById(item.uid).classList.toggle("active");
+              setTimeout(function() {
+                document.getElementById(item.uid).scrollIntoView();
+              }, 100);
+              
             }
             return(
               <div className="lab-item" key={`labitem${i}`} onClick={toggle} id={item.uid}>
