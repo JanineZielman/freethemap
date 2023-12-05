@@ -29,6 +29,14 @@
           ]
         }
       },
+      "pdf": {
+        "type": "Link",
+        "config": {
+          "label": "PDF",
+          "placeholder": "",
+          "select": "media"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

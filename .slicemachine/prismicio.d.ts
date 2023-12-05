@@ -31,6 +31,17 @@ interface ItemDocumentData {
      */
     person: prismicT.RelationField<"person">;
     /**
+     * PDF field in *Item*
+     *
+     * - **Field Type**: Link to Media
+     * - **Placeholder**: *None*
+     * - **API ID Path**: item.pdf
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    pdf: prismicT.LinkToMediaField;
+    /**
      * Slice Zone field in *Item*
      *
      * - **Field Type**: Slice Zone

@@ -27,7 +27,7 @@ body{
   color: $white;
 }
 
-h1,h2, h3{
+h1,h2{
   font-family: "leo", sans-serif;
   font-weight: 700;
   font-style: italic;
@@ -95,6 +95,9 @@ h4{
       h2{
         font-size: 5vw;
       }
+      h3{
+        font-size: 48px;
+      }
       .lab-item-cover{
         width: 50%;
         height: 100vh;
@@ -112,8 +115,9 @@ h4{
         p, h3{
           max-width: 900px;
         }
-        .content-block{
-          margin-bottom: 48px;
+        img{
+          width: 100%;
+          margin: 24px 0;
         }
         padding-bottom: 48px;
       }

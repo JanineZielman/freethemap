@@ -45,9 +45,11 @@ const Index = ({ navigation, settings, page, items }) => {
                 </div>
                 <div className="content">
                   {item.data.slices.map((slice, j) => {
-                    console.log(slice)
                     return(
                       <>
+                      {slice.slice_type == 'image' &&
+                        <PrismicNextImage field={slice.primary.image}/>
+                      }
                       {slice.slice_type == 'text' &&
                         <div className="content-block" key={`slice${j}`}>
                           <h3>{slice.primary.title}</h3>
