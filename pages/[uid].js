@@ -5,7 +5,8 @@ import * as prismicH from "@prismicio/helpers";
 import { createClient } from "../prismicio";
 import { components } from "../slices";
 import { Layout } from "../components/Layout";
-import Moment from 'moment';
+import { PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 
 const Page = ({ page, navigation,settings }) => {
   return (
@@ -23,8 +24,14 @@ const Page = ({ page, navigation,settings }) => {
         <meta property="og:description" content={settings.data.site_description} />
         <meta property="og:image" content={settings.data.image.url} />
       </Head>
-      <h2 className="page-title">{page.data.title}</h2>
       <div className={`container page`}>
+        <h2 className="page-title">{page.data.title}</h2>
+        <div className="content">
+          <PrismicNextImage field={page.data.image}/>
+          <div className="text">
+            <PrismicRichText field={page.data.text}/>
+          </div>
+        </div>
         <SliceZone slices={page.data.slices} components={components} />
       </div>
     </Layout>

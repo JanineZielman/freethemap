@@ -113,6 +113,19 @@
       }
     }
   }
+  .page{
+    .content{
+      flex-direction: column;
+    }
+    img{
+      width: 100%;
+    }
+    .text{
+      width: 100%;
+      padding-left: 0;
+      font-size: 20px;
+    }
+  }
 }
 
 @media only screen and (max-width: 600px) {

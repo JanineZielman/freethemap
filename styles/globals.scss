@@ -49,6 +49,48 @@ h4{
   margin: 0;
 }
 
+.hamburger{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 14px;
+  top: 14px;
+  mask-image: url(./SVG/menu.svg);
+  mask-repeat: no-repeat;
+  background-color: $white;
+  &.active{
+    width: 30px;
+    margin-right: 5px;
+    mask-image: url(./SVG/close.svg);
+  }
+  z-index: 999;
+  cursor: pointer;
+}
+
+.nav-items{
+  position: fixed;
+  background-color: black;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  top: 0px;
+  right: -300px;
+  width: 300px;
+  padding: 80px 24px;
+  transition: right 0.4s ease;
+  &.active{
+    right: 0;
+  }
+  a{
+    color: $white;
+    text-decoration: none;
+    font-size: 40px;
+    line-height: 1.5;
+  }
+  z-index: 888;
+}
+
 .intro{
   display: flex;
   img{
@@ -150,5 +192,25 @@ h4{
         padding-bottom: 48px;
       }
     }
+  }
+}
+
+.page{
+  max-width: 1400px;
+  display: block;
+  margin: 48px auto;
+  padding: 14px;
+  .content{
+    display: flex;
+  }
+  img{
+    width: 50%;
+    height: 100%;
+    padding-right: 14px;
+    margin-top: 24px;
+  }
+  .text{
+    width: 50%;
+    padding-left: 14px;
   }
 }
