@@ -80,7 +80,7 @@ export async function getStaticProps({ locale, previewData }) {
   const client = createClient({ previewData });
 
   const navigation = await client.getSingle("navigation", { lang: locale });
-  const settings = await client.getSingle("settings", { lang: locale });
+  const settings = await client.getSingle("settings");
   const page = await client.getByUID("page", "home", { lang: locale });
   const items = await client.getAllByType("item", { 
     lang: locale,
