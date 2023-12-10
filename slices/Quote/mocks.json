@@ -9,10 +9,15 @@
           {
             "type": "heading3",
             "content": {
-              "text": "Principle"
+              "text": "Daily"
             }
           }
         ]
+      },
+      "size": {
+        "__TYPE__": "FieldContent",
+        "value": "medium",
+        "type": "Select"
       }
     },
     "items": [

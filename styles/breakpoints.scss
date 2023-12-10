@@ -19,6 +19,42 @@
     font-size: 30px;
     margin: 0;
   }
+  .lab-items{
+    .lab-item{
+      &.active{
+        h2{
+          font-size: 5vw;
+        }
+        h3{
+          font-size: 48px;
+        }
+        h4{
+          font-size: 3vw;
+        }
+        .quote{
+          h3{
+            font-size: 50px;
+            line-height: 1;
+          }
+          &.medium{
+            h3{
+              font-size: 60px;
+            }
+          }
+          &.large{
+            h3{
+              font-size: 80px;
+            }
+          }
+        }
+        .content{
+          p{
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -47,6 +83,34 @@
   .lab-items{
     .lab-item{
       width: 50%;
+      &.active{
+        h2{
+          font-size: 38px;
+        }
+        h3{
+          font-size: 30px;
+        }
+        p{
+          font-size: 20px;
+        }
+
+        .quote{
+          h3{
+            font-size: 30px;
+            line-height: 1;
+          }
+          &.medium{
+            h3{
+              font-size: 40px;
+            }
+          }
+          &.large{
+            h3{
+              font-size: 50px;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -75,6 +139,23 @@
         }
         p{
           font-size: 20px;
+        }
+
+        .quote{
+          h3{
+            font-size: 30px;
+            line-height: 1;
+          }
+          &.medium{
+            h3{
+              font-size: 40px;
+            }
+          }
+          &.large{
+            h3{
+              font-size: 50px;
+            }
+          }
         }
         .lab-item-cover{
           width: 100%;

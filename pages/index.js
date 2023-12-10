@@ -57,7 +57,7 @@ const Index = ({ navigation, settings, page, items }) => {
                         </div>
                       }
                       {slice.slice_type == 'quote' &&
-                        <div className="content-block" key={`slice${j}`}>
+                        <div className={`content-block quote ${slice.primary.size}`} key={`slice${j}`}>
                           <PrismicRichText field={slice.primary.quote}/>
                         </div>
                       }
@@ -84,8 +84,20 @@ export async function getStaticProps({ locale, previewData }) {
   const page = await client.getByUID("page", "home", { lang: locale });
   const items = await client.getAllByType("item", { 
     lang: locale,
-    fetchLinks: 'person.title'
+    fetchLinks: 'person.title',
   });
+
+  items.sort((a, b) => {
+    if (a.uid < b.uid) {
+      return -1;
+    }
+    if (a.uid > b.uid) {
+      return 1;
+    }
+  
+    // names must be equal
+    return 0;
+  })
 
 
   return {

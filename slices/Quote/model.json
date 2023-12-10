@@ -19,6 +19,18 @@
             "allowTargetBlank": true,
             "multi": "heading3,strong,em,hyperlink"
           }
+        },
+        "size": {
+          "type": "Select",
+          "config": {
+            "label": "Size",
+            "placeholder": "",
+            "options": [
+              "small",
+              "medium",
+              "large"
+            ]
+          }
         }
       },
       "items": {},

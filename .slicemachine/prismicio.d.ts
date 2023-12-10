@@ -315,6 +315,16 @@ interface QuoteSliceDefaultPrimary {
      *
      */
     quote: prismicT.RichTextField;
+    /**
+     * Size field in *Quote → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **API ID Path**: quote.primary.size
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    size: prismicT.SelectField<"small" | "medium" | "large">;
 }
 /**
  * Default variation for Quote Slice
