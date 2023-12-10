@@ -121,6 +121,17 @@ export type NavigationDocument<Lang extends string = string> = prismicT.PrismicD
 /** Content for Page documents */
 interface PageDocumentData {
     /**
+     * Title field in *Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
      * Image field in *Page*
      *
      * - **Field Type**: Image

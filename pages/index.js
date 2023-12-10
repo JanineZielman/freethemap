@@ -94,8 +94,6 @@ export async function getStaticProps({ locale, previewData }) {
     if (a.uid > b.uid) {
       return 1;
     }
-  
-    // names must be equal
     return 0;
   })
 
