@@ -6,6 +6,30 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Biographies documents */
+interface BiographiesDocumentData {
+    /**
+     * Title field in *Biographies*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: biographies.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+}
+/**
+ * Biographies document from Prismic
+ *
+ * - **API ID**: `biographies`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BiographiesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<BiographiesDocumentData>, "biographies", Lang>;
 /** Content for Item documents */
 interface ItemDocumentData {
     /**
@@ -261,7 +285,7 @@ interface SettingsDocumentData {
  * @typeParam Lang - Language API ID of the document.
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<SettingsDocumentData>, "settings", Lang>;
-export type AllDocumentTypes = ItemDocument | NavigationDocument | PageDocument | PersonDocument | SettingsDocument;
+export type AllDocumentTypes = BiographiesDocument | ItemDocument | NavigationDocument | PageDocument | PersonDocument | SettingsDocument;
 /**
  * Primary content in Image → Primary
  *
@@ -414,6 +438,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { ItemDocumentData, ItemDocumentDataSlicesSlice, ItemDocument, NavigationDocumentData, NavigationDocumentDataMenuItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PersonDocumentData, PersonDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { BiographiesDocumentData, BiographiesDocument, ItemDocumentData, ItemDocumentDataSlicesSlice, ItemDocument, NavigationDocumentData, NavigationDocumentDataMenuItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PersonDocumentData, PersonDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

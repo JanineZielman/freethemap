@@ -26,6 +26,9 @@ export const linkResolver = (doc) => {
       return `/${doc.lang}/${doc.uid}`;
     }
   }
+  if (doc.type === 'biographies'){
+    return `/${doc.lang}/biographies`
+  }
   return `/`;
 };
 
