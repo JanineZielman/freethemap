@@ -167,6 +167,17 @@ interface PageDocumentData {
      */
     image: prismicT.ImageField<never>;
     /**
+     * Image link field in *Page*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.image_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    image_link: prismicT.LinkField;
+    /**
      * Text field in *Page*
      *
      * - **Field Type**: Rich Text

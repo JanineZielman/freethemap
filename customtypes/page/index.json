@@ -29,6 +29,14 @@
           "thumbnails": []
         }
       },
+      "image_link": {
+        "type": "Link",
+        "config": {
+          "label": "Image link",
+          "placeholder": "",
+          "select": null
+        }
+      },
       "text": {
         "type": "StructuredText",
         "config": {

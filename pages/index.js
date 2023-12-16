@@ -48,7 +48,10 @@ const Index = ({ navigation, settings, page, items }) => {
                     return(
                       <>
                       {slice.slice_type == 'image' &&
-                        <PrismicNextImage field={slice.primary.image}/>
+                        <div className="image">
+                          <PrismicNextImage field={slice.primary.image}/>
+                          <div className="caption"><PrismicRichText field={slice.primary.caption}/></div>
+                        </div>
                       }
                       {slice.slice_type == 'text' &&
                         <div className="content-block" key={`slice${j}`}>

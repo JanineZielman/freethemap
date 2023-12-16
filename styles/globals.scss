@@ -193,9 +193,19 @@ h4{
         p{
           font-size: 36px;
         }
-        img{
+        .image{
           width: 100%;
           margin: 24px 0;
+          img{
+            width: 100%;
+            height: auto;
+          }
+          .caption{
+            p{
+              font-size: $body;
+              margin: 0;
+            }
+          }
         }
         padding-bottom: 48px;
       }
