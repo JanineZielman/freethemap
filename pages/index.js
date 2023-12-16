@@ -3,7 +3,6 @@ import * as prismicH from "@prismicio/helpers";
 
 import { createClient } from "../prismicio";
 import { Layout } from "../components/Layout";
-import Link from "next/link";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
@@ -23,7 +22,9 @@ const Index = ({ navigation, settings, page, items }) => {
       </Head>
       <div className="container">
         <div className="intro">
-          <PrismicNextImage field={page.data.image}/>
+          <PrismicLink field={page.data.image_link} className="cover-image">
+            <PrismicNextImage field={page.data.image}/>
+          </PrismicLink>
           <div className="intro-text">
             <PrismicRichText field={page.data.text}/>
           </div>
