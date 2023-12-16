@@ -3,7 +3,7 @@
   src: url("Calibre-Regular.woff2") format("woff2");
 }
 
-$h1: 54px;
+$h1: 50px;
 $h2: 48px;
 $h3: 40px;
 $body: 24px;
@@ -147,11 +147,12 @@ h4{
       width: 100%;
       display: flex;
       h2{
-        font-size: 110px;
+        font-size: 100px;
       }
       h3{
         font-size: 48px;
         line-height: 1;
+        margin-top: 48px;
       }
       h4{
         font-size: 3vw;

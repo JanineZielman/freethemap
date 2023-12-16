@@ -52,8 +52,8 @@ const Index = ({ navigation, settings, page, items }) => {
                       }
                       {slice.slice_type == 'text' &&
                         <div className="content-block" key={`slice${j}`}>
-                          <h3>{slice.primary.title}</h3>
-                          <PrismicRichText field={slice.primary.text}/>
+                          {slice.primary.title &&<h3>{slice.primary.title}</h3>}
+                          {slice.primary.text &&<PrismicRichText field={slice.primary.text}/>}
                         </div>
                       }
                       {slice.slice_type == 'quote' &&
