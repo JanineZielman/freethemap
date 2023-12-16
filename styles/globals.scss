@@ -280,3 +280,22 @@ h4{
     opacity: 0.5;
   }
 }
+
+.logo-section{
+	position: relative;
+	h2{
+		font-weight: 400;
+	}
+	.logos{
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-top: 30px;
+		img{
+			width: auto;
+			height: 100px;
+			object-fit: contain;
+			margin-right: 14px;
+		}
+	}
+}

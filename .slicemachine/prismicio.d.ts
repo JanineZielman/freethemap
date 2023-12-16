@@ -204,7 +204,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = never;
+type PageDocumentDataSlicesSlice = ImageSlice | QuoteSlice | TextSlice | LogoSectionSlice;
 /**
  * Page document from Prismic
  *
@@ -347,6 +347,71 @@ type ImageSliceVariation = ImageSliceDefault;
  */
 export type ImageSlice = prismicT.SharedSlice<"image", ImageSliceVariation>;
 /**
+ * Primary content in LogoSection → Primary
+ *
+ */
+interface LogoSectionSliceDefaultPrimary {
+    /**
+     * Title field in *LogoSection → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: logo_section.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * Text field in *LogoSection → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: logo_section.primary.text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    text: prismicT.RichTextField;
+}
+/**
+ * Item in LogoSection → Items
+ *
+ */
+export interface LogoSectionSliceDefaultItem {
+    /**
+     * Logo field in *LogoSection → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: logo_section.items[].logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for LogoSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `LogoSection`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type LogoSectionSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<LogoSectionSliceDefaultPrimary>, Simplify<LogoSectionSliceDefaultItem>>;
+/**
+ * Slice variation for *LogoSection*
+ *
+ */
+type LogoSectionSliceVariation = LogoSectionSliceDefault;
+/**
+ * LogoSection Shared Slice
+ *
+ * - **API ID**: `logo_section`
+ * - **Description**: `LogoSection`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type LogoSectionSlice = prismicT.SharedSlice<"logo_section", LogoSectionSliceVariation>;
+/**
  * Primary content in Quote → Primary
  *
  */
@@ -449,6 +514,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { BiographiesDocumentData, BiographiesDocument, ItemDocumentData, ItemDocumentDataSlicesSlice, ItemDocument, NavigationDocumentData, NavigationDocumentDataMenuItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PersonDocumentData, PersonDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { BiographiesDocumentData, BiographiesDocument, ItemDocumentData, ItemDocumentDataSlicesSlice, ItemDocument, NavigationDocumentData, NavigationDocumentDataMenuItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PersonDocumentData, PersonDocument, SettingsDocumentData, SettingsDocument, AllDocumentTypes, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, LogoSectionSliceDefaultPrimary, LogoSectionSliceDefaultItem, LogoSectionSliceDefault, LogoSectionSliceVariation, LogoSectionSlice, QuoteSliceDefaultPrimary, QuoteSliceDefault, QuoteSliceVariation, QuoteSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

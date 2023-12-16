@@ -22,6 +22,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "LogoSection": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   }
 }
