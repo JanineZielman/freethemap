@@ -7,7 +7,7 @@ import { PrismicRichText } from '@prismicio/react'
  * @param { TextProps }
  */
 const Text = ({ slice }) => (
-  <section className='text-section'>
+  <section className='text text-section'>
      <PrismicRichText field={slice.primary.text}/>
   </section>
 )

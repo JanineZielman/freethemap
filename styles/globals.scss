@@ -167,22 +167,6 @@ h4{
       h4{
         font-size: 3vw;
       }
-      .quote{
-        h3{
-          font-size: 64px;
-          line-height: 1;
-        }
-        &.medium{
-          h3{
-            font-size: 72px;
-          }
-        }
-        &.large{
-          h3{
-            font-size: 90px;
-          }
-        }
-      }
       .lab-item-cover{
         width: 50%;
         height: 100vh;
@@ -278,6 +262,23 @@ h4{
   transition: opacity 0.4s ease;
   &:hover{
     opacity: 0.5;
+  }
+}
+
+.quote{
+  h3{
+    font-size: 64px;
+    line-height: 1;
+  }
+  &.medium{
+    h3{
+      font-size: 72px;
+    }
+  }
+  &.large{
+    h3{
+      font-size: 90px;
+    }
   }
 }
 

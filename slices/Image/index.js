@@ -9,7 +9,7 @@ import { PrismicNextImage } from "@prismicio/next";
  */
 const Image = ({ slice }) => {
   return(
-    <section className={`image-section ${slice.primary.size}`}>
+    <section className={`image-section`}>
       <PrismicNextImage field={slice.primary.image}/>
       <PrismicRichText className="caption" field={slice.primary.caption}/>
     </section>
