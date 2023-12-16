@@ -134,7 +134,7 @@ h4{
       padding: 24px;
       display: flex;
       flex-direction: column;
-      // justify-content: space-between;
+      position: relative;
       cursor: pointer;
       h4{
         margin-top: 24px;
@@ -253,5 +253,20 @@ h4{
     border: 1px solid white;
     cursor: pointer;
     height: 100%;
+  }
+}
+
+.download-button{
+  width: 40px;
+  height: 40px;
+  mask-image: url(./SVG/download.svg);
+  mask-repeat: no-repeat;
+  background-color: $white;
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  transition: opacity 0.4s ease;
+  &:hover{
+    opacity: 0.5;
   }
 }

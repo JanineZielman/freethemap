@@ -4,7 +4,7 @@ import * as prismicH from "@prismicio/helpers";
 import { createClient } from "../prismicio";
 import { Layout } from "../components/Layout";
 import Link from "next/link";
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
 const Index = ({ navigation, settings, page, items }) => {
@@ -38,10 +38,11 @@ const Index = ({ navigation, settings, page, items }) => {
               
             }
             return(
-              <div className="lab-item" key={`labitem${i}`} onClick={toggle} id={item.uid}>
-                <div className="lab-item-cover">
+              <div className="lab-item" key={`labitem${i}`} id={item.uid}>
+                <div className="lab-item-cover" onClick={toggle}>
                   <h2>{item.data?.title}</h2>
                   <h4>{item.data.person.data?.title}</h4>
+                  <PrismicLink className="download-button" field={item.data.pdf}></PrismicLink>
                 </div>
                 <div className="content">
                   {item.data.slices.map((slice, j) => {
