@@ -19,9 +19,11 @@ html {
 }
 
 p a{
-  color: rgb(152, 63, 177);
+  color: rgb(191, 0, 255);
   text-decoration: none;
   font-family: "leo", sans-serif;
+  font-weight: 500;
+  line-height: 1;
 }
 
 body{
@@ -250,8 +252,8 @@ h4{
 }
 
 .download-button{
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   mask-image: url(./SVG/download.svg);
   mask-repeat: no-repeat;
   background-color: $white;
@@ -264,7 +266,7 @@ h4{
   }
 }
 
-.quote{
+.quote, .lab-items .lab-item.active .quote{
   h3{
     font-size: 64px;
     line-height: 1;
