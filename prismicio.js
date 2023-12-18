@@ -21,15 +21,15 @@ export const repositoryName = prismic.getRepositoryName(sm.apiEndpoint);
 export const linkResolver = (doc) => {
   if (doc.type === "page") {
     if (doc.uid === "home") {
-      return `/${doc.lang}`;
+      return `/en-eu`;
     } else {
-      return `/${doc.lang}/${doc.uid}`;
+      return `/en-eu/${doc.uid}`;
     }
   }
   if (doc.type === 'biographies'){
-    return `/${doc.lang}/biographies`
+    return `/en-eu/biographies`
   }
-  return `/`;
+  return `/en-eu`;
 };
 
 /**
