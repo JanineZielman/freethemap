@@ -27,6 +27,16 @@
           "allowTargetBlank": true,
           "multi": "paragraph,hyperlink,strong,em,list-item,o-list-item"
         }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {
+            "width": 1080
+          },
+          "thumbnails": []
+        }
       }
     }
   }

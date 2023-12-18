@@ -5,6 +5,7 @@ import { createClient } from "../prismicio";
 import { Layout } from "../components/Layout";
 import { PrismicRichText } from "@prismicio/react";
 import Collapsible from 'react-collapsible';
+import { PrismicNextImage } from "@prismicio/next";
 
 const BioPage = ({ navigation, settings, page, items }) => {
   return (
@@ -27,6 +28,7 @@ const BioPage = ({ navigation, settings, page, items }) => {
             return(
               <div className="person" id={item.uid} key={`person${i}`}>
                 <Collapsible trigger={item.data.title}>
+                  <PrismicNextImage field={item.data.image}/>
                   <PrismicRichText field={item.data.bio}/>
                 </Collapsible>
               </div>

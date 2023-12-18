@@ -9,6 +9,9 @@ import { PrismicRichText } from '@prismicio/react'
 const Text = ({ slice }) => (
   <section className='text text-section'>
      <PrismicRichText field={slice.primary.text}/>
+     {slice.primary.divider == true &&
+      <div className='divider'></div>
+     }
   </section>
 )
 

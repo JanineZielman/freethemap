@@ -1,11 +1,11 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "sets"
+    "value": "central"
   },
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "equally",
+    "value": "ants",
     "type": "Text"
   },
   "bio": {
@@ -14,9 +14,30 @@
       {
         "type": "paragraph",
         "content": {
-          "text": "Aute ut cillum occaecat. Nostrud laboris reprehenderit est labore laborum aute eiusmod esse sunt nisi."
+          "text": "Nulla labore velit et ad minim."
         }
       }
     ]
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+      "width": 8640,
+      "height": 8640
+    },
+    "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?rect=0%2C0%2C8640%2C8640&w=1080&h=1080",
+    "width": 1080,
+    "height": 1080,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
   }
 }

@@ -239,6 +239,17 @@ interface PersonDocumentData {
      *
      */
     bio: prismicT.RichTextField;
+    /**
+     * Image field in *Person*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: person.image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
 }
 /**
  * Person document from Prismic
@@ -485,6 +496,17 @@ interface TextSliceDefaultPrimary {
      *
      */
     text: prismicT.RichTextField;
+    /**
+     * Divider field in *Text → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: text.primary.divider
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    divider: prismicT.BooleanField;
 }
 /**
  * Default variation for Text Slice

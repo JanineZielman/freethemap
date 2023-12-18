@@ -22,7 +22,7 @@ p a{
   color: rgb(191, 0, 255);
   text-decoration: none;
   font-family: "leo", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1;
 }
 
@@ -33,6 +33,13 @@ body{
   padding: 0;
   background-color: black;
   color: $white;
+}
+
+.divider{
+  width:  50vw;
+  max-width: 900px;
+  height: 5px;
+  border-bottom: 1px dashed black;
 }
 
 .page-title{
@@ -248,12 +255,17 @@ h4{
     border: 1px solid white;
     cursor: pointer;
     height: 100%;
+    img{
+      margin-top: 24px;
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
 .download-button{
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   mask-image: url(./SVG/download.svg);
   mask-repeat: no-repeat;
   background-color: $white;

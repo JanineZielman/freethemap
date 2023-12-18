@@ -55,6 +55,9 @@
       }
     }
   }
+  .divider{
+    width:  calc(50vw - 48px);
+  }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -203,5 +206,8 @@
         font-size: 50px;
       }
     }
+  }
+  .divider{
+    width:  calc(100vw - 28px);
   }
 }
